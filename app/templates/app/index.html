@@ -1,0 +1,23 @@
+
+<h2>  Comparação dos jogadores {{player1.profile.personaname}} e {{player2.profile.personaname}} </h2>
+
+<h3>  
+    Partidas juntos: {{total_juntos}} <br/>
+    Vitórias juntos: {{vitorias_juntos}} <br/>
+    Derrotas juntos: {{derrotas_juntos}} <br/>
+</h3>
+
+<h3>  
+    Partidas um contra o outro: {{total_separados}} <br/>
+    Vitórias de {{player1.profile.personaname}}: {{vitorias_separados}} <br/>
+    Vitórias de {{player2.profile.personaname}}: {{derrotas_separados}} <br/>
+</h3>
+
+
+<h2>  Lista das partidas um contra o outro </h2>
+
+<ul>
+    {% for partida in lista_partidas_separados %}
+        <li> <a href="https://pt.dotabuff.com/matches/{{partida.match_id}}" target="_blank">https://pt.dotabuff.com/matches/{{partida.match_id}}</a></li>
+    {% endfor %}
+</ul>
